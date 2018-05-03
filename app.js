@@ -14,4 +14,7 @@ app.get('/search',function(req,res){
    console.log(req.query.department);
    console.log(req.query.division);
    console.log(req.query.location);
+   console.log(output.output);
 })
+
+
