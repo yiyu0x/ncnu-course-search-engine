@@ -5,9 +5,9 @@
         <title>NCNU course search</title>
     </head>
     <body>
-        <form action="search.js" method="get">
+        <form action="http://127.0.0.1:3000/search" method="get">
             <!-- this is faculty select option-->
-            學院:<select name="YourLocation">
+            學院:<select name="faculty">
                 <option label=" "></option>
                 <option value="Taipei">人文學院</option>
                 <option value="Taoyuan">管理學院</option>
@@ -15,7 +15,7 @@
                 <option value="Miaoli">教育學院</option>
             </select>
             <!-- this is department select option-->
-            開課單位:<select name="YourLocation">
+            開課單位:<select name="department">
                 <option>中文系</option>
                 <option>外文系</option>
                 <option>社工系</option>
