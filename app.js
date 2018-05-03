@@ -1,4 +1,4 @@
-var quary = require('./quary');
+// var quary = require('./quary_exec');
 
 const express = require('express');
 const app = express();
@@ -19,4 +19,4 @@ app.get('/search',function(req,res){
 })
 
 
-console.log(quary.output);
+// console.log(quary.output);
