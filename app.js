@@ -1,6 +1,7 @@
+var quary = require('./quary');
+
 const express = require('express');
 const app = express();
-
 app.use(express.static('public'));
 
 app.listen(3000,function(){
@@ -14,7 +15,8 @@ app.get('/search',function(req,res){
    console.log(req.query.department);
    console.log(req.query.division);
    console.log(req.query.location);
-   console.log(output.output);
+   // console.log(quary.output);
 })
 
 
+console.log(quary.output);
