@@ -7,15 +7,16 @@
     <body>
         <form action="http://127.0.0.1:3000/search" method="get">
             <!-- this is faculty select option-->
-            學院:<select name="faculty">
-                <option label=" "></option>
+            學院:<select name="faculty" value="不指定">
+                <option>不指定</option>
                 <option value="Taipei">人文學院</option>
                 <option value="Taoyuan">管理學院</option>
                 <option value="Hsinchu">科技學院</option>
                 <option value="Miaoli">教育學院</option>
             </select>
             <!-- this is department select option-->
-            開課單位:<select name="department">
+            開課單位:<select name="department" value="不指定">
+                <option>不指定</option>
                 <option>中文系</option>
                 <option>外文系</option>
                 <option>社工系</option>
@@ -65,7 +66,8 @@
                 <option>語文中心</option>
             </select>
             <!-- this is credit select option-->
-            學分:<select name="credit">
+            學分:<select name="credit" value="不指定">
+                    <option>不指定</option>
                     <option>0</option>
                     <option>0.5</option>
                     <option>1.0</option>
@@ -73,13 +75,15 @@
                     <option>3.0</option>
                 </select>
             <!-- this is division select option-->
-            班別:<select name="division">
+            班別:<select name="division" value="不指定">
+                    <option>不指定</option>
                     <option>學士班</option>
                     <option>碩士班</option>
                     <option>博士班</option>
                 </select>
             <!-- this is location select option-->
-            地點:<select name="location">
+            地點:<select name="location" value="不指定"> 
+                    <option>不指定</option>
                     <option>人105</option>
                     <option>人107</option>
                     <option>人115</option>
