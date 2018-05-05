@@ -6,10 +6,11 @@
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
+        <div id="container">
         <div id="header">
             <form action="http://127.0.0.1:3000/search" method="get">
                 <!-- this is faculty select option-->
-                學院:<select name="faculty" value="不指定">
+                學院 : <select name="faculty" value="不指定">
                     <option>不指定</option>
                     <option>人文學院</option>
                     <option>管理學院</option>
@@ -17,7 +18,7 @@
                     <option>教育學院</option>
                 </select>
                 <!-- this is department select option-->
-                開課單位:<select name="department" value="不指定">
+                開課單位 : <select name="department" value="不指定">
                     <option>不指定</option>
                     <option>中文系</option>
                     <option>外文系</option>
@@ -68,7 +69,7 @@
                     <option>語文中心</option>
                 </select>
                 <!-- this is credit select option-->
-                學分:<select name="credit" value="不指定">
+                學分 : <select name="credit" value="不指定">
                         <option>不指定</option>
                         <option>0</option>
                         <option>0.5</option>
@@ -77,14 +78,14 @@
                         <option>3.0</option>
                     </select>
                 <!-- this is division select option-->
-                班別:<select name="division" value="不指定">
+                班別 : <select name="division" value="不指定">
                         <option>不指定</option>
                         <option>學士班</option>
                         <option>碩士班</option>
                         <option>博士班</option>
                     </select>
                 <!-- this is location select option-->
-                地點:<select name="location" value="不指定"> 
+                地點 : <select name="location" value="不指定"> 
                         <option>不指定</option>
                         <option>人105</option>
                         <option>人107</option>
@@ -339,16 +340,19 @@
                         <option>團體諮商室(B103)</option>
                         <option>B01-2</option>
                     </select>
+                </P>
                 <!-- this is input text for teacher name-->
-                教師姓名:<input type="text" size="9">
+                教師姓名 : <input type="text" size="9">
                 <!-- this is input text for class time-->
-                授課時段:<input type="text" size="9">
+                授課時段 : <input type="text" size="9">
                 <!-- this is class-id-->
-                課號查詢:<input type="text" size="5">
+                課號查詢 : <input type="text" size="5">
                 <!-- this is submit button-->
-                <input type="submit" value="查詢">
+                <input id="submit" type="submit" value="查詢">
+                <input id="clean" type="submit" value="clean">
             </form>
         </div>
         <div id="show"></div> 
+    </div>
     </body>
 </html>
