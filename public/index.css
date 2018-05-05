@@ -1,0 +1,11 @@
+#header {
+	margin:40px;
+}
+
+#show {
+	margin:0px auto;
+	width:1200px;
+	height:600px;
+	border:3px #cccccc dashed;
+	background-color: #FFDED7;
+} 
