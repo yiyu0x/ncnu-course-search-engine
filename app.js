@@ -12,13 +12,21 @@ app.listen(3000,function(){
 	console.log("http://127.0.0.1:3000");
 });
 
+app.set('view engine', 'ejs');
+
+// app.get('/', function(req,res){
+// 	res.render('index.ejs');
+// });
+// app.get('/', function(req, res){
+// 	res.render('index.ejs');
+// });
+
 app.get('/search',function(req,res){
 	// console.log("GET request");
 	// console.log(req.query.faculty);
 	// console.log(req.query.department);
 	// console.log(req.query.division);
 	// console.log(req.query.course_credit);
-	
 	if (req.query.faculty == "不指定"){
 		req.query.faculty = "%";
 	}
@@ -47,7 +55,18 @@ app.get('/search',function(req,res){
 				 "location like "      + user_location         + ";";
 
 	console.log("sql_quary : " + sql_quary);
-    quary_exec.searchDB(sql_quary);
+
+	quary_exec.searchDB(sql_quary,function(records){
+    	// console.log(records.join('\n'));
+    	res.render('index.ejs',{data:records.join('\n')});
+    });
+
+
+
+
+
+    // console.log(getRecords)
+    // console.log(output);
 
 })
 
