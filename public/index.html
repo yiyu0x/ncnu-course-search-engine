@@ -4,13 +4,49 @@
         <meta charset="UTF-8">
         <title>NCNU 課程快速搜尋</title>
         <link rel="stylesheet" type="text/css" href="index.css">
+        <script type="text/javascript">
+            var lst = ['中文系','外文系','社工系','公行系','公行專班','公職養成學分學程','歷史系','東南亞系','東南亞系人類學','東南亞系在職專班','華文學程','國際華語文學程','文創產業政策學程','非營利組織專班','原鄉發展學士專班','管院','國企系','經濟系','資管系','財金系','觀光餐旅系觀光','觀光餐旅系餐旅','高階經管班','兩岸高階主管班','新興產業博士班','新興產業碩士班','土木系','資工系','電機系','應化系','應化生醫所','應光系','光電碩專班','國比系','教政系','諮人系','諮人系終身學習與人力資源','心理健康與諮詢專班','課科所','終身學習專班','教育學程','體育室','軍訓室','共同選','共同必','通識','語文中心'];
+
+                function f1(){
+                var sel = document.getElementById('fac').value;
+                var str = "<option>不指定</option>";
+
+                if(sel == '人文學院'){
+                    for(i=0;i<15;i++)
+                        str = str + "<option>"+lst[i]+"</option>";
+                    document.getElementById('dep').innerHTML = str;
+                }
+                else if(sel == '管理學院'){
+                    for(i=15;i<26;i++)
+                        str = str + "<option>"+lst[i]+"</option>";
+                    document.getElementById('dep').innerHTML = str;
+                }
+                else if(sel == '科技學院'){
+                    for(i=26;i<33;i++)
+                        str = str + "<option>"+lst[i]+"</option>";
+                    document.getElementById('dep').innerHTML = str;
+                }
+                else if(sel == '教育學院'){
+                    for(i=33;i<lst.length;i++)
+                        str = str + "<option>"+lst[i]+"</option>";
+                    document.getElementById('dep').innerHTML = str;
+                }
+                else{
+                    for(i=0;i<lst.length;i++)
+                        str = str + "<option>"+lst[i]+"</option>";
+                    document.getElementById('dep').innerHTML = str;
+                }
+            }
+
+
+        </script>
     </head>
     <body>
         <div id="container">
             <div id="header">
                 <form action="http://127.0.0.1:3000/search" method="get">
                     <!-- this is faculty select option-->
-                    學院 : <select name="faculty" value="不指定">
+                    學院 : <select name="faculty" value="不指定" id="fac" onchange="f1()">
                         <option>不指定</option>
                         <option>人文學院</option>
                         <option>管理學院</option>
@@ -18,7 +54,7 @@
                         <option>教育學院</option>
                     </select>
                     <!-- this is department select option-->
-                    開課單位 : <select name="department" value="不指定">
+                    開課單位 : <select name="department" value="不指定" id="dep">
                         <option>不指定</option>
                         <option>中文系</option>
                         <option>外文系</option>
@@ -357,21 +393,17 @@
                 <fieldset id="fieldset">
                     <legend>Information</legend>
                     <div id="information">
-                        <table class="fixed_header">
-                            <thead>
-                                <tr>
-                                    <th>開課單位</th>
-                                    <th>課程名稱</th>
-                                    <th>教師姓名</th>
-                                    <th>班別</th>
-                                    <th>地點</th>
-                                    <th>學分</th>
-                                    <th>課號</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               
-                            </tbody>
+                        <table>
+                            <tr id="tr_title">
+                                <td>開課單位</td>
+                                <td>課程名稱</td>
+                                <td>教師姓名</td>
+                                <td>班別</td>
+                                <td>地點</td>
+                                <td>時段</td>
+                                <td>學分</td>
+                                <td>課號</td>
+                            </tr>
                         </table>
                     </div>
                 </fieldset>

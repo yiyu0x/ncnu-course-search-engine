@@ -13,7 +13,7 @@ conn.execute('''CREATE TABLE ncnu_info
         semester      INT     NOT NULL,
         department    TEXT    NOT NULL,
         edepartment   TEXT    NOT NULL,
-        cousre_id     CHAR(10) NOT NULL,
+        course_id     CHAR(10) NOT NULL,
         class         CHAR(2) NOT NULL,
         course_cname  TEXT    NOT NULL,
         course_ename  TEXT    NOT NULL,
@@ -33,7 +33,7 @@ book_node = root.getiterator('item')
 data_dict = {}
 sql_statment = '''INSERT INTO ncnu_info (faculty,year,
                                          semester,department,
-                                         edepartment,cousre_id,
+                                         edepartment,course_id,
                                          class,course_cname,
                                          course_ename,classtime,
                                          location,teacher,
