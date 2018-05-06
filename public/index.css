@@ -70,7 +70,6 @@ select, input {
 }
 
 table {
-	min-height: 537px;
 	width: 100%;
 	text-align: center;
 	margin: 0px auto;
@@ -84,6 +83,3 @@ table {
 	border-width: 0px 0px 1px 0px;
 }
 
-td {
-	height: 30px;
-}
