@@ -54,12 +54,10 @@ app.get('/search',function(req,res){
 				 "course_credit like " + user_course_credit    + " and " +
 				 "location like "      + user_location         + ";";
 
-	console.log("sql_quary : " + sql_quary);
-
+	// console.log("sql_quary : " + sql_quary);
 	quary_exec.searchDB(sql_quary,function(records){
-			// console.log(records);
+			console.log(records);
 			res.render('index.ejs',{items:records});
-
     });
 
 
