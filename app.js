@@ -57,8 +57,9 @@ app.get('/search',function(req,res){
 	console.log("sql_quary : " + sql_quary);
 
 	quary_exec.searchDB(sql_quary,function(records){
-    	// console.log(records.join('\n'));
-    	res.render('index.ejs',{data:records.join('\n')});
+			// console.log(records);
+			res.render('index.ejs',{items:records});
+
     });
 
 
