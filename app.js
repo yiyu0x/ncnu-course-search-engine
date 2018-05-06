@@ -14,13 +14,15 @@ app.listen(3000,function(){
 
 app.set('view engine', 'ejs');
 
-// app.get('/', function(req,res){
-// 	res.render('index.ejs');
-// });
+app.get('/', function(req,res){
+	// res.render('index.ejs');
+	app.use(express.static('public'));
+
+});
 // app.get('/', function(req, res){
 // 	res.render('index.ejs');
 // });
-
+var first_time = true;
 app.get('/search',function(req,res){
 	// console.log("GET request");
 	// console.log(req.query.faculty);
@@ -56,16 +58,12 @@ app.get('/search',function(req,res){
 
 	// console.log("sql_quary : " + sql_quary);
 	quary_exec.searchDB(sql_quary,function(records){
-			console.log(records);
+			// console.log(records);
 			res.render('index.ejs',{items:records});
+			// console.log('x');
     });
-
-
-
-
-
-    // console.log(getRecords)
-    // console.log(output);
+    // res.redirect('/search');
+	// app.use(express.static('views/index.ejs'));
 
 })
 
