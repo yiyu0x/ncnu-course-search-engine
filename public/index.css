@@ -8,11 +8,10 @@ body {
 	height:600px;
 	/*border:3px #cccccc dashed;*/
 	/*background-color: #FFDED7;*/
-	padding: 10px;
 } 
 
 #header {
-	margin:20px auto;
+	margin:0px auto;
 	/*background-color: #FF5733;*/
 	width:1200px;
 	font-size: 20px;
@@ -57,7 +56,7 @@ select, input {
     letter-spacing: 0.15em;
     font-style: italic;
     border: 3px outset black;
-    padding:5px;
+    padding:3px;
     margin: 50px;
 }
 
@@ -66,20 +65,37 @@ select, input {
 	top: -50px;
 	background-color: white;
 	font-size: 20px;
-	overflow: auto;
 }
 
-table {
+.fixed_header {
 	width: 100%;
+	table-layout: fixed;
+	text-align: justify;
+	border-radius: 10px;
+}
+
+.fixed_header tbody {
+	display:block;
+  	overflow: auto;
+  	height: 500px;
+  	width: 100%;
+}
+
+.fixed_header thead {
+  	background: white;
+}
+
+.fixed_header thead tr {
+	display:block;
+}
+
+.fixed_header th, .fixed_header td {
 	text-align: center;
-	margin: 0px auto;
-	border: 4px double black;
-	padding: 3px 10px;
+	width: 200px;
 }
 
-#tr_title td{
-	height: 50px;
-	border: 0px solid black;
+.fixed_header th {
+	border: 1px solid black;
 	border-width: 0px 0px 1px 0px;
+	background-color: gray;
 }
-
