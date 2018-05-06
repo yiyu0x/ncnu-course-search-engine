@@ -1,9 +1,14 @@
+body {
+	background-color: white;
+}
+
 #show {
 	margin:0px auto;
 	width:1200px;
 	height:600px;
-	border:3px #cccccc dashed;
-	background-color: #FFDED7;
+	/*border:3px #cccccc dashed;*/
+	/*background-color: #FFDED7;*/
+	padding: 10px;
 } 
 
 #header {
@@ -11,14 +16,14 @@
 	/*background-color: #FF5733;*/
 	width:1200px;
 	font-size: 20px;
-	padding: 10px 10px;
+	padding: 30px 10px 10px;
 	border-radius: 10px;
 }
 
 select, input {
 	/*background-color: #b2938d;*/
 	border-radius: 10px;
-	border: 3px solid #665544;
+	border: 3px inset #665544;
 }
 
 #submit, #clean {
@@ -29,4 +34,56 @@ select, input {
 
 #submit:hover, #clean:hover {
 	border-color: black;
+	border: 3px outset black;
+}
+
+#show fieldset {
+	height: 575px;
+	min-width: 100px;
+	text-align: justify;
+	font-size: 25px;
+    font-weight: bold;
+    background-color: #a3a3a3;
+    border: 4px double black;
+    border-radius: 20px;
+    border-width: 5px 0px;
+}
+
+#show fieldset legend {
+    border-radius: 10px 0px ;
+    background-color:#e2e2e2;
+	font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    font-style: italic;
+    border: 3px outset black;
+    padding:5px;
+    margin: 50px;
+}
+
+#information {
+	position: relative;
+	top: -50px;
+	background-color: white;
+	font-size: 20px;
+	overflow: auto;
+}
+
+table {
+	min-height: 537px;
+	width: 100%;
+	text-align: center;
+	margin: 0px auto;
+	border: 4px double black;
+	padding: 3px 10px;
+}
+
+#tr_title td{
+	height: 50px;
+	border: 0px solid black;
+	border-width: 0px 0px 1px 0px;
+}
+
+td {
+	height: 30px;
 }
