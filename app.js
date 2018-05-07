@@ -7,8 +7,8 @@ sql_quary = "SELECT * FROM ncnu_info where ";
 
 app.use(express.static('public'));
 
-var port = process.env.PORT || config.port;
-app.listen(port,function(){
+// var port = process.env.PORT || config.port;
+app.listen(3000,function(){
 	console.log("server start");
 	console.log("http://127.0.0.1:3000");
 });
@@ -25,12 +25,7 @@ app.get('/', function(req,res){
 // });
 var first_time = true;
 app.get('/search',function(req,res){
-	app.use(express.static('public'));
-	// console.log("GET request");
-	// console.log(req.query.faculty);
-	// console.log(req.query.department);
-	// console.log(req.query.division);
-	// console.log(req.query.course_credit);
+	// app.use(express.static('public'));
 	if (req.query.faculty == "不指定"){
 		req.query.faculty = "%";
 	}
@@ -62,9 +57,7 @@ app.get('/search',function(req,res){
 	quary_exec.searchDB(sql_quary,function(records){
 			// console.log(records);
 			res.render('index.ejs',{items:records});
-			// console.log('x');
     });
-    // res.redirect('/search');
 	// app.use(express.static('views/index.ejs'));
 
 })
