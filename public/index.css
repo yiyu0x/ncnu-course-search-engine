@@ -99,3 +99,14 @@ select, input {
 	border-width: 0px 0px 1px 0px;
 	background-color: gray;
 }
+
+#s{
+	position: relative;
+	left: 680px;
+	top:-25px;
+}
+
+#submit{
+	position: relative;
+	left: 30px;
+}
