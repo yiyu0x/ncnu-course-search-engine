@@ -24,6 +24,7 @@ app.get('/', function(req,res){
 // });
 var first_time = true;
 app.get('/search',function(req,res){
+	app.use(express.static('public'));
 	// console.log("GET request");
 	// console.log(req.query.faculty);
 	// console.log(req.query.department);
