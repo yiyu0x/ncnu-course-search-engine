@@ -8,7 +8,7 @@ sql_quary = "SELECT * FROM ncnu_info where ";
 app.use(express.static('public'));
 
 var port = process.env.PORT || config.port;
-app.listen(3000,function(){
+app.listen(port,function(){
 	console.log("server start");
 	console.log("http://127.0.0.1:3000");
 });
