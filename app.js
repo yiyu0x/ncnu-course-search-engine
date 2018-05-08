@@ -1,17 +1,26 @@
-var quary_exec = require('./quary_exec');
 const express = require('express');
 const app = express();
 
-// var sql_quary = "SELECT * FROM ncnu_info where ";
+var config = require('./config.js')[app.get('env')];
+var port = config.port // production mode will return 3001
+
+var quary_exec = require('./quary_exec');
 
 app.use(express.static('public'));
 
-
-var port = process.env.PORT || config.port;
 //var port = 3000; //on local testing
 app.listen(port,function(){
 	console.log("server start");
 	//console.log("http://127.0.0.1:3000");
+	
+	if(app.get('env') == 'development'){
+		console.log('This environment is for development : ');
+		console.log("http://127.0.0.1:3000");
+		console.log('you can use \'NODE_ENV=production node app.js\' to change');
+	}else{
+		console.log('This environment is for production : ');
+		console.log('you can use \'NODE_ENV=develop node app.js\' to change');
+	}
 
 });
 
