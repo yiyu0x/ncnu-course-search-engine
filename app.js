@@ -6,18 +6,18 @@ const app = express();
 
 app.use(express.static('public'));
 
+
 var port = process.env.PORT || config.port;
 //var port = 3000; //on local testing
 app.listen(port,function(){
 	console.log("server start");
 	//console.log("http://127.0.0.1:3000");
+
 });
 
 app.set('view engine', 'ejs');
 
 app.get('/', function(req,res){
-	// res.render('index.ejs');
-	// app.use(express.static('public'));
 
 });
 // app.get('/', function(req, res){
@@ -59,11 +59,10 @@ app.get('/search',function(req,res){
 		console.log('---------------------------');
 		res.render('index.ejs',{items:records});
     });
-	// app.use(express.static('views/index.ejs'));
 
 })
 
-// exports.port = port;
+
 
 
 
