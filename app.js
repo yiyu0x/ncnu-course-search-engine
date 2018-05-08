@@ -3,7 +3,7 @@ var quary_exec = require('./quary_exec');
 const express = require('express');
 const app = express();
 
-sql_quary = "SELECT * FROM ncnu_info where ";
+// var sql_quary = "SELECT * FROM ncnu_info where ";
 
 app.use(express.static('public'));
 
@@ -24,7 +24,9 @@ app.get('/', function(req,res){
 // 	res.render('index.ejs');
 // });
 var first_time = true;
+var counter = 0;
 app.get('/search',function(req,res){
+	let sql_quary = "SELECT * FROM ncnu_info where ";
 	// app.use(express.static('public'));
 	if (req.query.faculty == "不指定"){
 		req.query.faculty = "%";
@@ -53,10 +55,12 @@ app.get('/search',function(req,res){
 				 "course_credit like " + user_course_credit    + " and " +
 				 "location like "      + user_location         + ";";
 
-	// console.log("sql_quary : " + sql_quary);
+	console.log("sql_quary : " + sql_quary);
 	quary_exec.searchDB(sql_quary,function(records){
-			// console.log(records);
-			res.render('index.ejs',{items:records});
+		console.log('in searchDB');
+		console.log(counter);
+		console.log('---------------------------');
+		res.render('index.ejs',{items:records});
     });
 	// app.use(express.static('views/index.ejs'));
 

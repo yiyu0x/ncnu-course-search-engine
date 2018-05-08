@@ -21,11 +21,12 @@ function searchDB(sql,callback){
             			 row.classtime    , 
             			 row.course_credit,
             			 row.course_id);
-            records.push(rows);
+			records.push(rows);
         })
         callback(records);
 	});	
 	db.close();
+	console.log('db closed!');
 }
 
 exports.searchDB = searchDB;
