@@ -5,7 +5,7 @@ var config = {
         // anything else
     },
     production: {
-        port: 3001,
+        port: process.env.PORT || config.port,
         // anything else
     }
 };
