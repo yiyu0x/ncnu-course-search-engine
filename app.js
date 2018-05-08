@@ -8,10 +8,8 @@ var quary_exec = require('./quary_exec');
 
 app.use(express.static('public'));
 
-//var port = 3000; //on local testing
 app.listen(port,function(){
 	console.log("server start");
-	//console.log("http://127.0.0.1:3000");
 	
 	if(app.get('env') == 'development'){
 		console.log('This environment is for development : ');
@@ -29,9 +27,7 @@ app.set('view engine', 'ejs');
 app.get('/', function(req,res){
 
 });
-// app.get('/', function(req, res){
-// 	res.render('index.ejs');
-// });
+
 app.get('/search',function(req,res){
 	let sql_quary = "SELECT * FROM ncnu_info where ";
 	// app.use(express.static('public'));
@@ -70,9 +66,3 @@ app.get('/search',function(req,res){
     });
 
 })
-
-
-
-
-
-
