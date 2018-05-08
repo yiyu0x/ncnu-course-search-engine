@@ -1,4 +1,3 @@
-// var quary = require('./quary_exec');
 var quary_exec = require('./quary_exec');
 const express = require('express');
 const app = express();
@@ -7,24 +6,19 @@ const app = express();
 
 app.use(express.static('public'));
 
-// var port = process.env.PORT || config.port;
-app.listen(3000,function(){
+// var port = 3000; //in local testing
+var port = process.env.PORT || config.port;//on server(heroku)
+app.listen(port,function(){
 	console.log("server start");
-	console.log("http://127.0.0.1:3000");
+	// console.log("http://127.0.0.1:3000");
 });
 
 app.set('view engine', 'ejs');
 
 app.get('/', function(req,res){
-	// res.render('index.ejs');
-	// app.use(express.static('public'));
 
 });
-// app.get('/', function(req, res){
-// 	res.render('index.ejs');
-// });
-var first_time = true;
-var counter = 0;
+
 app.get('/search',function(req,res){
 	let sql_quary = "SELECT * FROM ncnu_info where ";
 	// app.use(express.static('public'));
@@ -62,11 +56,10 @@ app.get('/search',function(req,res){
 		console.log('---------------------------');
 		res.render('index.ejs',{items:records});
     });
-	// app.use(express.static('views/index.ejs'));
 
 })
 
-// exports.port = port;
+
 
 
 
