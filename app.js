@@ -55,7 +55,6 @@ app.get('/search',function(req,res){
 	console.log("sql_quary : " + sql_quary);
 	quary_exec.searchDB(sql_quary,function(records){
 		console.log('in searchDB');
-		console.log(counter);
 		console.log('---------------------------');
 		res.render('index.ejs',{items:records});
     });
