@@ -27,3 +27,42 @@
 前端的HTML與CSS放在`/public`中，後端用expressJS來做routing，查詢的結果用ejs來渲染(views/index.ejs)到前端。資料庫選擇sqlite3。
 
 src裡面只有ncnu.db會直接被程式使用，其他檔案皆為初始化用(取得api,解析api(xml),建db,插入資料到ncnu.db)
+
+## 環境
+
+本地環境用`port:3000來開發`，但是heroku上用`port:process.env.PORT || config.port`，為了更有效區隔不同環境，目錄下建了一個`config.js`
+
+config.js:
+
+```javascript
+// config.js
+var config = {
+    development: {
+        port: 3000,
+        // anything else
+    },
+    production: {
+        port: process.env.PORT || config.port,
+        // anything else
+    }
+};
+
+module.exports = config;
+```
+
+並在`app.js`加入
+
+```javascript
+var config = require('./config.js')[app.get('env')];
+var port = config.port
+```
+
+然後將local環境設為`develop`
+
+> NODE_ENV=develop node app.js
+
+將heroku設為`production`
+
+> heroku config:add NODE_ENV=production
+
+以上即可達成環境區隔，開發同一份code。
