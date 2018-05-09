@@ -59,7 +59,7 @@ var port = config.port
 
 然後將local環境設為`develop`
 
-> NODE_ENV=develop node app.js
+> NODE_ENV=develop
 
 將heroku設為`production`
 
