@@ -30,7 +30,7 @@ src裡面只有ncnu.db會直接被程式使用，其他檔案皆為初始化用(
 
 ## 環境
 
-本地環境用`port:3000來開發`，但是heroku上用`port:process.env.PORT || config.port`，為了更有效區隔不同環境，目錄下建了一個`config.js`
+本地環境用`port:3000來開發`，但是heroku上用`port:process.env.PORT`，為了更有效區隔不同環境，目錄下建了一個`config.js`
 
 config.js:
 
@@ -42,7 +42,7 @@ var config = {
         // anything else
     },
     production: {
-        port: process.env.PORT || config.port,
+        port: process.env.PORT,
         // anything else
     }
 };
