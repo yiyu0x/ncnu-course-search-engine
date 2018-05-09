@@ -65,6 +65,7 @@ select, input {
 	top: -50px;
 	background-color: white;
 	font-size: 20px;
+	border-radius: 5px;
 }
 
 .fixed_header {
@@ -98,15 +99,9 @@ select, input {
 	border: 1px solid black;
 	border-width: 0px 0px 1px 0px;
 	background-color: gray;
+	border-radius: 5px;
 }
 
-#s{
-	position: relative;
-	left: 680px;
-	top:-25px;
-}
 
-#submit{
-	position: relative;
-	left: 30px;
-}
+
+
