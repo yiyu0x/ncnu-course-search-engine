@@ -57,9 +57,9 @@ var config = require('./config.js')[app.get('env')];
 var port = config.port
 ```
 
-然後將local環境設為`develop`
+然後將local環境設為`development`
 
-> NODE_ENV=develop node app.js
+> NODE_ENV=development
 
 將heroku設為`production`
 
