@@ -9,6 +9,7 @@
 ## 結構
 
 ```
+├── config.js
 ├── app.js
 ├── quary_exec.js
 ├── public
