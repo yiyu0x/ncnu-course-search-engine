@@ -30,7 +30,7 @@ app.get('/', function(req,res){
 
 app.get('/search',function(req,res){
 	let sql_quary = "SELECT * FROM ncnu_info where ";
-	// app.use(express.static('public'));
+
 	if (req.query.faculty == "不指定"){
 		req.query.faculty = "%";
 	}
@@ -46,17 +46,32 @@ app.get('/search',function(req,res){
 	if (req.query.location == "不指定"){
 		req.query.location = "%";
 	}
+	if (!req.query.teacher){
+		req.query.teacher = "%";
+	}
+	if (!req.query.classtime){
+		req.query.classtime = "%";
+	}
+	if (!req.query.course_id){
+		req.query.course_id = "%";
+	}
 	user_faculty       = "'" + req.query.faculty       +"'";
 	user_department    = "'" + req.query.department    +"'";
 	user_course_credit = "'" + req.query.credit        +"'";
 	user_division      = "'" + req.query.division      +"'";
 	user_location      = "'" + req.query.location      +"'";
+	user_teacher       = "'" + req.query.teacher       +"'";
+	user_classtime     = "'" + req.query.classtime     +"'";
+	user_course_id     = "'" + req.query.course_id     +"'";
 
    	sql_quary += "faculty like "       + user_faculty          + " and " +
 				 "department like "    + user_department       + " and " +
 				 "division like "      + user_division         + " and " +
 				 "course_credit like " + user_course_credit    + " and " +
-				 "location like "      + user_location         + ";";
+				 "location like "      + user_location         + " and " +
+				 "teacher like "       + user_teacher          + "  and " +
+				 "classtime like "     + user_classtime        + " and " +
+				 "course_id like "     + user_course_id        + " ; ";
 
 	console.log("sql_quary : " + sql_quary);
 	quary_exec.searchDB(sql_quary,function(records){
