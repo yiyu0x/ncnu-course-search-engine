@@ -372,17 +372,30 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <% for(var i=0;i<items.length;i++) {%>
-                                <tr>
-                                    <td><%= items[i][0] %></td>
-                                    <td><%= items[i][1] %></td>
-                                    <td><%= items[i][2] %></td>
-                                    <td><%= items[i][3] %></td>
-                                    <td><%= items[i][4] %></td>
-                                    <td><%= items[i][5] %></td>
-                                    <td><%= items[i][6] %></td>
-                                    <td><%= items[i][7] %></td>
-                                </tr>
+                                <% for(var i=0;i<items.length;i++) {
+                                     if (i % 2 == 0) {%>
+                                        <tr>
+                                            <td><%= items[i][0] %></td>
+                                            <td><%= items[i][1] %></td>
+                                            <td><%= items[i][2] %></td>
+                                            <td><%= items[i][3] %></td>
+                                            <td><%= items[i][4] %></td>
+                                            <td><%= items[i][5] %></td>
+                                            <td><%= items[i][6] %></td>
+                                            <td><%= items[i][7] %></td>
+                                        </tr>
+                                    <%} else {%>
+                                        <tr style="background-color: #f2f2f2">
+                                            <td><%= items[i][0] %></td>
+                                            <td><%= items[i][1] %></td>
+                                            <td><%= items[i][2] %></td>
+                                            <td><%= items[i][3] %></td>
+                                            <td><%= items[i][4] %></td>
+                                            <td><%= items[i][5] %></td>
+                                            <td><%= items[i][6] %></td>
+                                            <td><%= items[i][7] %></td>
+                                        </tr>
+                                    <% } %>  
                                 <% } %>
                             </tbody>
                         </table>
