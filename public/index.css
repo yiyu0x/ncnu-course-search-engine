@@ -88,17 +88,27 @@ select, input {
 
 .fixed_header thead tr {
 	display:block;
-	margin: 0px 20px 0px 0px;
+	margin: 0px 14px 0px 0px;
 }
 
-.fixed_header th, .fixed_header td {
+.fixed_header th {
 	text-align: center;
-	/*border: 2px solid black;*/
 	width: 200px;
 }
 
+.fixed_header td {
+	text-align: center;
+	width: 12.5%;
+}
+
 tbody td {
+	/*border: 2px solid black;*/
 	padding: 18px 10px;
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
 }
 
 .fixed_header th {
