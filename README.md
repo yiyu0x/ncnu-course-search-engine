@@ -69,3 +69,7 @@ var port = config.port
 > heroku config:add NODE_ENV=production
 
 以上即可達成環境區隔，開發同一份code。
+
+## 如何幫忙
+
+[ncnu_course團隊開發流程](https://hackmd.io/lm5n3SpIR9--ddRyI17J8g?view)
