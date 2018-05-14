@@ -29,6 +29,13 @@ app.get('/', function(req,res){
 });
 
 app.get('/search',function(req,res){
+	let sql_detected = req.query.teacher + req.query.classtime + req.query.course_id;
+	if(sql_detected.match("'")||sql_detected.match('"')||sql_detected.match(';')){
+		res.send('you are a hacker , we dont welcome you.');
+		req.query.teacher = "%";
+		req.query.classtime = "%";
+		req.query.course_id = "%";
+	}
 	let sql_quary = "SELECT * FROM ncnu_info where ";
 
 	if (req.query.faculty == "不指定"){
@@ -55,6 +62,7 @@ app.get('/search',function(req,res){
 	if (!req.query.course_id){
 		req.query.course_id = "%";
 	}
+	
 	user_faculty       = "'" + req.query.faculty       +"'";
 	user_department    = "'" + req.query.department    +"'";
 	user_course_credit = "'" + req.query.credit        +"'";
