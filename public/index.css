@@ -1,116 +1,116 @@
-body {
-	background-color: white;
+
+.my-navbar {
+	border-radius: 0px !important;
 }
 
-#show {
-	margin:0px auto;
-	width:1200px;
-	height:600px;
-	/*border:3px #cccccc dashed;*/
-	/*background-color: #FFDED7;*/
-} 
+.navbar-header {
+	font-weight: bold;
+	border: 1px solid gray;
+	border-width: 0px 3px 0px 0px;
+	/*border-radius: 5px;*/
+	letter-spacing: 0.1em;
+}
+
+ul {
+	position: relative;
+	left: 20px;
+}
+
+#GitHub {
+	/*font-weight: bold;*/
+	letter-spacing: 0.1em;
+	font-size: 17px;
+}
+
+.custom-table {
+	text-align: center;
+}
 
 #header {
+	width: 1200px;
 	margin:0px auto;
-	/*background-color: #FF5733;*/
-	width:1200px;
-	font-size: 20px;
-	padding: 30px 10px 10px;
-	border-radius: 10px;
+	text-align: justify;
+	font-size: 17px;
+	font-family: "arial";
+	padding: 10px 10px 10px;
+	/*background-color: yellow;*/
+	letter-spacing: 0.1em;
+	font-weight: bold;
 }
 
 select, input {
-	/*background-color: #b2938d;*/
-	border-radius: 10px;
-	border: 3px inset #665544;
+	border-radius: 5px;
+	border: 2px solid #665544;
+}
+
+select:hover, input:hover {
+	box-shadow: 1px 1px 1px #888888;
 }
 
 #submit, #clean {
 	position: relative;
-	left:519px;
-	font-size: 17px;
+	left:333px;
+	font-size: 15px;
+	box-shadow: 1px 1px 1px #888888;
 }
 
-#submit:hover, #clean:hover {
-	border-color: black;
-	border: 3px outset black;
+#show {
+	margin:10px auto 0px;
+	padding: 10px;
+	height: 600px;
+}
+
+#show legend {
+	letter-spacing: 0.5em;
 }
 
 #show fieldset {
-	height: 575px;
-	min-width: 100px;
-	text-align: justify;
-	font-size: 25px;
-    font-weight: bold;
-    background-color: #a3a3a3;
-    border: 4px double black;
-    border-radius: 20px;
-    border-width: 5px 0px;
+	height: 500px;
 }
 
-#show fieldset legend {
-    border-radius: 10px 0px ;
-    background-color:#e2e2e2;
-	font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 0.15em;
-    font-style: italic;
-    border: 3px outset black;
-    padding:3px;
-    margin: 50px;
-}
-
-#information {
-	position: relative;
-	top: -50px;
-	background-color: white;
-	font-size: 20px;
-	border-radius: 5px;
-}
-
-.fixed_header {
+.table {
 	width: 100%;
 	table-layout: fixed;
 	text-align: justify;
 	border-radius: 10px;
+	letter-spacing: 0.2em;
 }
 
-.fixed_header tbody {
-	border-collapse: collapse;
+.table tbody {
 	display:block;
   	overflow: auto;
   	height: 500px;
+	box-shadow: 0px 0px 7px #888888;
   	width: 100%;
+  	font-size: 20px;
+  	border-radius: 1px;
 }
 
-.fixed_header thead {
-  	background: white;
-}
-
-.fixed_header thead tr {
+.table thead tr {
 	display:block;
 	margin: 0px 13px 0px 0px;
+	box-shadow: 0px 0px 7px #888888;
+	font-size: 17px;
+  	border-radius: 5px;
 }
 
-.fixed_header th {
+.table th {
 	text-align: center;
 	width: 200px;
+	border: 1px solid black;
+	border-width: 0px 0px 1px 0px;
+	background-color: gray;
+	letter-spacing: 0.5em;
+	color: white;
 }
 
-.fixed_header td {
+.table td {
 	text-align: center;
 	width: 12.5%;
 }
 
-
-.fixed_header th {
-	border: 1px solid black;
-	border-width: 0px 0px 1px 0px;
-	background-color: gray;
-	border-radius: 5px;
-}
-
-.fixed_header tbody td {
+.table tbody td {
 	/*border: 2px solid black;*/
 	padding: 18px 10px;
 }
+
