@@ -4,11 +4,41 @@
         <meta charset="UTF-8">
         <title>NCNU 課程快速搜尋</title>
         <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="index.js" ></script>
     </head>
     <body>
-        <div id="container">
-            <div id="header">
+        <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">菜鸟教程</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">iOS</a></li>
+            <li><a href="#">SVN</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Java <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">jmeter</a></li>
+                    <li><a href="#">EJB</a></li>
+                    <li><a href="#">Jasper Report</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">分离的链接</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">另一个分离的链接</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+        <div id="container" class="container">
+            <div id="header"  class="container form-group">
                 <form action="/search" method="get">
                     <!-- this is faculty select option-->
                     學院 : <select name="faculty" value="不指定" id="fac" onchange="f1()">
@@ -350,15 +380,15 @@
                     <!-- this is class-id-->
                     課號查詢 : <input name='course_id' type="text" size="5">
                     <!-- this is submit button-->
-                    <input id="submit" type="submit" value="查詢">
-                    <input id="clean" type ="button" onclick="javascript:location.href='/'" value="清除"></input>
+                    <input id="submit" type="submit" value="查詢" class="btn btn-default btn-lg ">
+                    <input id="clean" type ="button" onclick="javascript:location.href='/'" value="清除" class="btn btn-default btn-lg "></input>
                 </form>
             </div>
-            <div id="show">
+            <div id="show" class="container">
                 <fieldset id="fieldset">
                     <legend>課程資訊</legend>
                     <div id="information">
-                        <table class="fixed_header">
+                        <table class="table table-striped table-hover custom-table text-center">
                             <thead>
                                 <tr>
                                     <th>開課單位</th>
