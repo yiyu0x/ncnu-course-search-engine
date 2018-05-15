@@ -7,6 +7,8 @@ var port = config.port // production mode will return 3001
 var quary_exec = require('./quary_exec');
 
 app.use(express.static('public'));
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 
 app.listen(port,function(){
 	console.log("server start");

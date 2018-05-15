@@ -1,13 +1,16 @@
-
 .my-navbar {
 	border-radius: 0px !important;
+	opacity: 0.0;
+}
+
+#container {
+	opacity: 0.0;
 }
 
 .navbar-header {
 	font-weight: bold;
 	border: 1px solid gray;
 	border-width: 0px 3px 0px 0px;
-	/*border-radius: 5px;*/
 	letter-spacing: 0.1em;
 }
 
@@ -59,6 +62,7 @@ select:hover, input:hover {
 }
 
 #show legend {
+	font-weight: bold;
 	letter-spacing: 0.5em;
 }
 
