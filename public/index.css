@@ -112,17 +112,7 @@ select:hover, input:hover {
 	padding: 18px 10px;
 }
 
-#class {
-	position: relative;
-	left: -7px;
-}
-
-#time {
-	position: relative;
-	left: -7px;
-}
-
-#pos {
+#class, #time, #pos {
 	position: relative;
 	left: -7px;
 }
