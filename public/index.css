@@ -1,4 +1,27 @@
 
+.my-navbar {
+	border-radius: 0px !important;
+}
+
+.navbar-header {
+	font-weight: bold;
+	border: 1px solid gray;
+	border-width: 0px 3px 0px 0px;
+	/*border-radius: 5px;*/
+	letter-spacing: 0.1em;
+}
+
+ul {
+	position: relative;
+	left: 20px;
+}
+
+#GitHub {
+	/*font-weight: bold;*/
+	letter-spacing: 0.1em;
+	font-size: 17px;
+}
+
 .custom-table {
 	text-align: center;
 }
@@ -6,10 +29,10 @@
 #header {
 	width: 1200px;
 	margin:0px auto;
-	text-align: left;
+	text-align: justify;
 	font-size: 17px;
 	font-family: "arial";
-	padding: 30px 10px 10px;
+	padding: 10px 10px 10px;
 	/*background-color: yellow;*/
 	letter-spacing: 0.1em;
 	font-weight: bold;
