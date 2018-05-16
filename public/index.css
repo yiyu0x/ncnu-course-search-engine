@@ -104,7 +104,7 @@ select:hover, input:hover {
 	border: 1px solid black;
 	border-width: 0px 0px 1px 0px;
 	letter-spacing: 0.5em;
-	color: lightgray;
+	color: #e5e5e5;
 }
 
 .table td {
