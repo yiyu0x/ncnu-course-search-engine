@@ -31,6 +31,16 @@
 
 src裡面只有ncnu.db會直接被程式使用，其他檔案皆為初始化用(取得api,解析api(xml),建db,插入資料到ncnu.db)
 
+## 套件
+
+```
+├── express
+├── ejs
+├── sqlite3
+├── bootstrap@3
+├── jquary
+```
+
 ## 環境
 
 本地環境用`port:3000來開發`，但是heroku上用`port:process.env.PORT`，為了更有效區隔不同環境，目錄下建了一個`config.js`
