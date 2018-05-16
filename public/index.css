@@ -63,6 +63,7 @@ select:hover, input:hover {
 
 #show legend {
 	font-weight: bold;
+	color: #1e1e1e;
 	letter-spacing: 0.5em;
 }
 
@@ -94,7 +95,7 @@ select:hover, input:hover {
 	box-shadow: 0px 0px 7px #888888;
 	font-size: 17px;
   	border-radius: 5px;
-  	background-color: gray
+  	background-color: #282828;
 }
 
 .table th {
@@ -102,9 +103,8 @@ select:hover, input:hover {
 	width: 200px;
 	border: 1px solid black;
 	border-width: 0px 0px 1px 0px;
-	background-color: gray;
 	letter-spacing: 0.5em;
-	color: white;
+	color: lightgray;
 }
 
 .table td {
