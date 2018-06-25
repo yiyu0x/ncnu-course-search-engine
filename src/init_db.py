@@ -4,12 +4,6 @@ import requests
 import html
 from bs4 import BeautifulSoup
 
-def resUrl(year, semester, course_id, class_):
-    url = 'https://ccweb.ncnu.edu.tw/student/aspmaker_course_opened_detail_viewview.php?showdetail=&year='+year+semester+'&courseid='+course_id+'&class='+class_+'&modal=1'
-    res = requests.get(url)
-    result = BeautifulSoup(res.text,"html.parser").find(id = 'el_aspmaker_course_opened_detail_view_syllabus').text
-    # print(url)
-    return html.escape(result)
 
 ##########################################################################################
 conn = sqlite3.connect('ncnu.db')
@@ -34,8 +28,7 @@ conn.execute('''CREATE TABLE ncnu_info
         eteacher      CHAR(20) NOT NULL,
         division      CHAR(20) NOT NULL,
         edivision     CHAR(20) NOT NULL,
-        course_credit CHAR(20) NOT NULL,
-        course_info   TEXT     NOT NULL);
+        course_credit CHAR(20) NOT NULL);
         ''')
 print('Table created successfully');
 ##########################################################################################
@@ -49,8 +42,7 @@ sql_statment = '''INSERT INTO ncnu_info (faculty,year,
                                          course_ename,classtime,
                                          location,teacher,
                                          eteacher,division,
-                                         edivision,course_credit,
-                                         course_info) 
+                                         edivision,course_credit) 
                          VALUES ('''
                          # 1, 'Paul', 32, 'California', 20000.00 )
                          # ''');
@@ -76,8 +68,7 @@ for node in book_node:
     sql_statment_pre += "'" + str(node[12].text) + "'" + ','
     sql_statment_pre += "'" + node[13].text + "'" + ','
     sql_statment_pre += "'" + node[14].text + "'" + ','
-    sql_statment_pre += "'" + node[15].text + "'" + ','
-    sql_statment_pre += "'" + resUrl(node[1].text, node[2].text, node[5].text, node[6].text) + "'"
+    sql_statment_pre += "'" + node[15].text + "'"  
     sql_statment_pre += ');'
     print(sql_statment_pre)
     conn.execute(sql_statment_pre)
