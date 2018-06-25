@@ -42,6 +42,7 @@ print('Table created successfully');
 # insert data to table
 root = ET.parse("feed.xml")
 book_node = root.getiterator('item')
+data_dict = {}
 sql_statment = '''INSERT INTO ncnu_info (faculty,year,
                                          semester,department,
                                          edepartment,course_id,
