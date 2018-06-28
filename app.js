@@ -1,4 +1,4 @@
-c onst express = require('express');
+const express = require('express');
 const app = express();
 
 var config = require('./config.js')[app.get('env')];
@@ -12,7 +12,7 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 app.listen(port,function(){
 	console.log("server start");
-	
+
 	if(app.get('env') == 'development'){
 		console.log('This environment is for development : ');
 		console.log("http://127.0.0.1:3000");
@@ -64,7 +64,7 @@ app.get('/search',function(req,res){
 	if (!req.query.course_id){
 		req.query.course_id = "%";
 	}
-	
+
 	user_faculty       = "'" + req.query.faculty       +"'";
 	user_department    = "'" + req.query.department    +"'";
 	user_course_credit = "'" + req.query.credit        +"'";
