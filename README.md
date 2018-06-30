@@ -83,4 +83,6 @@ var port = config.port
 ## 如何幫忙
 
 [ncnu_course團隊開發流程](https://hackmd.io/lm5n3SpIR9--ddRyI17J8g?view)
-# 1071
+
+## 備註
+近期會用vue改寫 主要是想解決前端選擇清單的部分(不想要寫死) 有興趣的大大可以聯絡我.___.
