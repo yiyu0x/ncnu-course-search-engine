@@ -14,9 +14,8 @@
 	letter-spacing: 0.1em;
 }
 
-ul {
-	position: relative;
-	left: 20px;
+.navLinks {
+	padding-left: 20px;
 }
 
 #GitHub {
@@ -29,14 +28,16 @@ ul {
 }
 
 #header {
-	width: 1200px;
-	margin:0px auto;
-	text-align: justify;
+    text-align: justify;
 	font-size: 17px;
 	font-family: "arial";
-	padding: 10px 10px 10px;
+	/* padding: 10px 10px 10px; */
 	letter-spacing: 0.1em;
 	font-weight: bold;
+}
+
+#header .field {
+	display: inline-block;
 }
 
 select, input {
@@ -49,8 +50,6 @@ select:hover, input:hover {
 }
 
 #submit, #clean {
-	position: relative;
-	left:333px;
 	font-size: 15px;
 	box-shadow: 1px 1px 1px #888888;
 }
