@@ -15,7 +15,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "test": "node app.js",
     "heroku": "NODE_ENV=production node index"
   },
