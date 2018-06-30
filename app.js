@@ -27,7 +27,7 @@ app.listen(port,function(){
 app.set('view engine', 'ejs');
 
 app.get('/', function(req,res){
-
+	res.render('index.ejs');
 });
 
 app.get('/search',function(req,res){
