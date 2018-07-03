@@ -9,27 +9,32 @@
 ## 結構
 
 ```
-├── config.js
 ├── app.js
-├── quary_exec.js
-├── public
-│   ├── index.css
-│   └── index.html
-├── src
+├── build_file
+│   ├── README.md
 │   ├── feed.xml
 │   ├── init_db.py
-│   ├── ncnu.db
 │   ├── ncnu_api_get.py
-│   ├── sql_exec.py
-│   ├── test.py
-│   └── xml_insert_db.py
+│   ├── src
+│   ├── testfile
+│   └── xml_to_json.py
+├── config.js
+├── public
+│   ├── animation.js
+│   ├── feed.json
+│   ├── index.css
+│   ├── index.js
+│   ├── index_ejs.css
+│   └── v.js
+├── quary_exec.js
 └── views
     └── index.ejs
 ```
 
-前端的HTML與CSS放在`/public`中，後端用expressJS來做routing，查詢的結果用ejs來渲染(views/index.ejs)到前端。資料庫選擇sqlite3。
+views裡面放主要的前端檔案`index.ejs`，後端用nodeJS與資料庫溝通，資料庫選擇sqlite3。
+public裡面放入一些css,js做的動畫效果，`v.js`是用Vue來控制前端選項的資料。
 
-src裡面只有ncnu.db會直接被程式使用，其他檔案皆為初始化用(取得api,解析api(xml),建db,插入資料到ncnu.db)
+build_file裡面放初始化的腳本，該目錄下有README.md可以看，主要就是抓取open data，插入資料庫，轉為json(前端選項要用)。
 
 ## 套件
 
@@ -39,6 +44,7 @@ src裡面只有ncnu.db會直接被程式使用，其他檔案皆為初始化用(
 ├── sqlite3
 ├── bootstrap@3
 ├── jquary
+├── vueJS(cdn)
 ```
 
 ## 環境
@@ -83,6 +89,3 @@ var port = config.port
 ## 如何幫忙
 
 [ncnu_course團隊開發流程](https://hackmd.io/lm5n3SpIR9--ddRyI17J8g?view)
-
-## 備註
-近期會用vue改寫 主要是想解決前端選擇清單的部分(不想要寫死) 有興趣的大大可以聯絡我.___.

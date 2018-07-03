@@ -16,7 +16,7 @@ app.listen(port,function(){
 	if(app.get('env') == 'development'){
 		console.log('This environment is for development : ');
 		console.log("http://127.0.0.1:3000");
-		console.log('you can use \'NODE_ENV=production \' to change');
+		console.log('you can use \'NODE_ENV=production\' to change');
 	}else{
 		console.log('This environment is for production : ');
 		console.log('you can use \'NODE_ENV=developmant\' to change');
@@ -32,7 +32,7 @@ app.get('/', function(req,res){
 
 app.get('/search',function(req,res){
 	let sql_detected = req.query.teacher + req.query.classtime + req.query.course_id;
-	if(sql_detected.match("'")||sql_detected.match('"')||sql_detected.match(';')){
+	if(sql_detected.match("'")||sql_detected.match('"')||sql_detected.match(';')||sql_detected.match('`')){
 		res.send('you are a hacker , we dont welcome you.');
 		req.query.teacher = "%";
 		req.query.classtime = "%";

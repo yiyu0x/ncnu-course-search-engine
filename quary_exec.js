@@ -1,5 +1,5 @@
 var sqlite3 = require('sqlite3').verbose();
-var file = "src/ncnu.db";
+var file = "build_file/src/ncnu.db";
 
 function searchDB(sql,callback){
 	var records = [];
