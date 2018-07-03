@@ -1,0 +1,5 @@
+@import url("index.css");
+
+.my-navbar, #container {
+	opacity: 1.0 !important;
+}

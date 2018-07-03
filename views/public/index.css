@@ -1,0 +1,131 @@
+.my-navbar {
+	border-radius: 0px !important;
+	opacity: 0.0;
+}
+
+#container {
+	opacity: 0.0;
+}
+
+.navbar-header {
+	font-weight: bold;
+	border: 1px solid gray;
+	border-width: 0px 3px 0px 0px;
+	letter-spacing: 0.1em;
+}
+
+.navLinks {
+	padding-left: 20px;
+}
+
+#GitHub {
+	letter-spacing: 0.1em;
+	font-size: 17px;
+}
+
+.custom-table {
+	text-align: center;
+}
+
+#header {
+    text-align: justify;
+	font-size: 17px;
+	font-family: "arial";
+	/* padding: 10px 10px 10px; */
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+#header .field {
+	display: inline-block;
+}
+
+select, input {
+	border-radius: 5px;
+	border: 2px solid #665544;
+}
+
+select:hover, input:hover {
+	box-shadow: 1px 1px 1px #888888;
+}
+
+#submit, #clean {
+	font-size: 15px;
+	box-shadow: 1px 1px 1px #888888;
+}
+
+#show {
+	margin:10px auto 0px;
+	padding: 10px;
+	height: 600px;
+}
+
+#show legend {
+	font-weight: bold;
+	color: #1e1e1e;
+	letter-spacing: 0.5em;
+}
+
+#show fieldset {
+	height: 500px;
+}
+
+.table {
+	width: 100%;
+	table-layout: fixed;
+	text-align: justify;
+	border-radius: 10px;
+	letter-spacing: 0.2em;
+}
+
+.table tbody {
+	display:block;
+  	overflow: auto;
+  	height: 500px;
+	box-shadow: 0px 0px 7px #888888;
+  	width: 100%;
+  	font-size: 20px;
+  	border-radius: 1px;
+}
+
+.table thead tr {
+	display:block;
+	/*margin: 0px 13px 0px 0px;*/
+	box-shadow: 0px 0px 7px #888888;
+	font-size: 17px;
+  	border-radius: 5px;
+  	background-color: #282828;
+}
+
+.table th {
+	text-align: center;
+	width: 200px;
+	border: 1px solid black;
+	border-width: 0px 0px 1px 0px;
+	letter-spacing: 0.5em;
+	color: #e5e5e5;
+}
+
+.table td {
+	text-align: center;
+	width: 12.5%;
+}
+
+.table tbody td {
+	padding: 18px 10px;
+}
+
+#class, #time, #pos {
+	position: relative;
+	left: -7px;
+}
+
+#rate {
+	position: relative;
+	left: -11px;
+}
+
+#id {
+	position: relative;
+	left: -15px;
+}
