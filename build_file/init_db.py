@@ -61,10 +61,22 @@ for node in book_node:
     sql_statment_pre += "'" + node[5].text + "'" + ','
     sql_statment_pre += "'" + node[6].text + "'" + ','
     sql_statment_pre += "'" + node[7].text + "'" + ','
-    sql_statment_pre += '"' + node[8].text + '"' + ','
-    sql_statment_pre += "'" + node[9].text + "'" + ','
-    sql_statment_pre += "'" + node[10].text + "'" + ','
-    sql_statment_pre += "'" + node[11].text + "'" + ','
+    if not node[8].text :
+        sql_statment_pre += '"' + '"' + ','
+    else :
+        sql_statment_pre += '"' + node[8].text + '"' + ','
+    if not node[9].text :
+        sql_statment_pre += '"' + '"' + ','
+    else :
+        sql_statment_pre += "'" + node[9].text + "'" + ','
+    if not node[10].text :
+        sql_statment_pre += '"' + '"' + ','
+    else :
+        sql_statment_pre += "'" + node[10].text + "'" + ','
+    if not node[11].text :
+        sql_statment_pre += '"' + '"' + ','
+    else :
+        sql_statment_pre += "'" + node[11].text + "'" + ','
     sql_statment_pre += "'" + str(node[12].text) + "'" + ','
     sql_statment_pre += "'" + node[13].text + "'" + ','
     sql_statment_pre += "'" + node[14].text + "'" + ','

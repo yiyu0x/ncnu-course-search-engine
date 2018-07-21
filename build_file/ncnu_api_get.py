@@ -1,6 +1,6 @@
 import requests
 
-URL = "https://api.ncnu.edu.tw/API/get.aspx?xml=course_ncnu&year=106&semester=2&unitId=all"
+URL = "https://api.ncnu.edu.tw/API/get.aspx?xml=course_ncnu&year=107&semester=1&unitId=all"
 
 print('waiting...')
 

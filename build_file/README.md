@@ -6,4 +6,4 @@
 
 3. xml_to_json.py
 
-3. xml_insert_db.py
+(debug) : xml_insert_db.py
