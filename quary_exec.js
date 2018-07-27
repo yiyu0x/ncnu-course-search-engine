@@ -12,7 +12,7 @@ function searchDB(data,callback){
 									location like ? and
 									teacher like ? and
 									classtime like ? and
-									course_id like ?;`);
+									course_id like ? ORDER BY course_id;`);
 		stmt.each(data,function(err, row) {
 			var rows = [];
 			console.log(row.course_cname,row.course_id);
