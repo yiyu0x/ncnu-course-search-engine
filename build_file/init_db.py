@@ -64,7 +64,13 @@ for node in book_node:
     if not node[8].text :
         sql_statment_pre += '"' + '"' + ','
     else :
-        sql_statment_pre += '"' + node[8].text + '"' + ','
+        if node[8].text.find('"') != -1 :
+            sql_statment_pre += "'" + node[8].text + "'" + ','
+        elif node[8].text.find("'") != -1 :
+            sql_statment_pre += '"' + node[8].text + '"' + ','
+        else :
+            sql_statment_pre += '"' + node[8].text + '"' + ','
+    
     if not node[9].text :
         sql_statment_pre += '"' + '"' + ','
     else :
