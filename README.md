@@ -34,9 +34,9 @@
 views裡面放主要的前端檔案`index.ejs`，後端用nodeJS與資料庫溝通，資料庫選擇sqlite3。
 public裡面放入一些css,js做的動畫效果，`v.js`是用Vue來控制前端選項的資料。
 
-build_file裡面放初始化的腳本，該目錄下有README.md可以看，主要就是抓取open data，插入資料庫，轉為json(前端選項要用)。
-
 morgan用來紀錄request的log。
+
+build_file裡面放初始化的腳本，該目錄下有README.md可以看，主要就是抓取open data，插入資料庫，轉為json(前端選項要用)。
 
 ## 套件
 
