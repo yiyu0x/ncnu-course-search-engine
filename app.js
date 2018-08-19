@@ -3,8 +3,17 @@ const app = express();
 
 var config = require('./config.js')[app.get('env')];
 var port = config.port // production mode will return 3001
-
 var quary_exec = require('./quary_exec');
+
+
+//record logs
+var fs = require('fs');
+var path = require('path');
+var morgan = require('morgan');
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
+app.use(morgan('short', {stream: accessLogStream}));
+//
+
 
 app.use(express.static('public'));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
