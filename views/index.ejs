@@ -6,16 +6,20 @@
         <title>NCNU 課程快速搜尋</title>
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <script
-	            src="https://code.jquery.com/jquery-3.3.1.min.js"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
         <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript" src="animation.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
+
     </head>
     <body>
         <nav id="nav" class="navbar navbar-inverse my-navbar" role="navigation">
@@ -86,32 +90,29 @@
                         <!-- this is input text for teacher name-->
                         <div class="field">
                             <label for="teacher">教師姓名 :</label>
-                            <!-- <input id="myCar" list="cars" />
-                            <datalist id="cars">
-                            <option value="BMW">
-                            <option value="Ford">
-                            <option value="Volvo">
-                            </datalist> -->
-                            <input name="teacher" id="teacher" type="text" size="9" list="teacher_name" autocomplete="off">
-                            <datalist id="teacher_name">
+                            <input name="teacher" id="teacher" type="text" size="9" autocomplete="off">
+                            <!-- <input name="teacher" id="teacher" type="text" size="9" list="teacher_name" autocomplete="off" class="awesomplete"> -->
+                            <!-- <datalist id="teacher_name">
                                 <option v-for="teacher in teacher_list">{{ teacher }}</option>
-                            </datalist>
+                            </datalist> -->
                         </div>
                         <!-- this is input text for class time-->
                         <div class="field">
                             <label for="classtime">授課時段 :</label>
-                            <input name="classtime" id="classtime" type="text" size="9" list="time" autocomplete="off">
+                            <input name="classtime" id="classtime" type="text" size="9" autocomplete="off">
+                            <!-- <input name="classtime" id="classtime" type="text" size="9" list="time" autocomplete="off">
                             <datalist id="time">
                                 <option v-for="time in time_list">{{ time }}</option>
-                            </datalist>
+                            </datalist> -->
                         </div>
                         <!-- this is class-id-->
                         <div class="field">
                             <label for="course_id">課號查詢 :</label>
-                            <input name="course_id" id="course_id" type="text" size="5" list="courseID_list" autocomplete="off">
+                            <input name="course_id" id="course_id" type="text" size="5" autocomplete="off">
+                            <!-- <input name="course_id" id="course_id" type="text" size="5" list="courseID_list" autocomplete="off">
                             <datalist id="courseID_list">
                                 <option v-for="courseID in courseID_list">{{ courseID }}</option>
-                            </datalist>
+                            </datalist> -->
                         </div>
                         <!-- this is submit button-->
                         <div class="field pull-right">
@@ -158,6 +159,5 @@
             </div> 
         </div>
         <script type="text/javascript" src="v.js"></script>
-        <!-- <script src="../public/v.js"></script> -->
     </body>
 </html>

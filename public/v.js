@@ -12,6 +12,17 @@ $(document).ready(function(e){
                 teacher_list:  result['teacher']
             }
         });
-    });
 
+        $("#teacher").autocomplete({
+            source: result['teacher']
+        });
+
+        $("#classtime").autocomplete({
+            source: result['time']
+        });
+        
+        $("#course_id").autocomplete({
+            source: result['course_id']
+        });
+    });
 });
