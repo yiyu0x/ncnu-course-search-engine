@@ -10,7 +10,7 @@ if os.path.isfile(filepath):
     os.remove(filepath) 
 
 response = requests.get(URL)
-with open(filepath, 'wb') as file:
+with open(filepath, 'w') as file:
     file.write(response.content)
 
 print('done.')
