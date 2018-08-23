@@ -14,4 +14,7 @@ results
 node_modules
 npm-debug.log
 
+feed.html
 access.log
+ncnu.db
+feed.json

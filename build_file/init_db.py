@@ -2,15 +2,19 @@ import xml.etree.cElementTree as ET
 import sqlite3
 import requests
 import html
+import os
 from bs4 import BeautifulSoup
 
 
 ##########################################################################################
+filepath = "./src/ncnu.db"
+if os.path.isfile(filepath):
+    os.remove(filepath) 
 conn = sqlite3.connect('./src/ncnu.db')
 print('Opened database successfully');
 ##########################################################################################
 # DROP old table and create new table
-conn.execute("DROP TABLE ncnu_info;")
+# conn.execute("DROP TABLE ncnu_info;")
 conn.execute('''CREATE TABLE ncnu_info
        (ID            INTEGER     PRIMARY KEY AUTOINCREMENT,
         faculty       TEXT    NOT NULL,
@@ -33,7 +37,7 @@ conn.execute('''CREATE TABLE ncnu_info
 print('Table created successfully');
 ##########################################################################################
 # insert data to table
-root = ET.parse("feed.xml")
+root = ET.parse("./src/feed.xml")
 book_node = root.getiterator('item')
 sql_statment = '''INSERT INTO ncnu_info (faculty,year,
                                          semester,department,
