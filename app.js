@@ -11,10 +11,9 @@ var fs = require('fs');
 var path = require('path');
 var morgan = require('morgan');
 
-morgan.format('myformat', '[:date[clf]] ":method :url" :status :res[content-length] - :response-time ms');
-
+// morgan.format('myformat', '[:date[clf]] ":method :url" :status :res[content-length] - :response-time ms');
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
-app.use(morgan('myformat', { stream: accessLogStream }));
+app.use(morgan('combined', { stream: accessLogStream }));
 //
 
 
