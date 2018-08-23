@@ -8,6 +8,10 @@ print('waiting...')
 filepath = "./src/feed.xml"
 response = requests.get(URL)
 
+dirpath = "./src"
+if not os.path.isdir(dirpath):
+    os.mkdir(dirpath)
+
 with open(filepath, 'wb') as file:
     file.write(response.content)
 
