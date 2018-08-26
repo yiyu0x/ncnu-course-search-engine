@@ -1,6 +1,7 @@
 # ncnu_course
 
 ![Python Version](https://img.shields.io/badge/Python-3.6-green.svg)
+![node Version](https://img.shields.io/badge/node-8.1-green.svg)
 
 ## 說明
 
