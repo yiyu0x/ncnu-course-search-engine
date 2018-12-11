@@ -3,6 +3,10 @@
 ![Python Version](https://img.shields.io/badge/Python-3.6-green.svg)
 ![node Version](https://img.shields.io/badge/node-8.1-green.svg)
 
+## 公告
+
+2018/12/11 : 此專案日後不再維護，新版課程搜尋系統移至 [https://github.com/yiyu0x/ncnu-course-X]
+
 ## 說明
 
 
